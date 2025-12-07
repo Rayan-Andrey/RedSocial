@@ -28,9 +28,13 @@ document.addEventListener("DOMContentLoaded",()=>{
             if(result.success){
                 alert("El registro se guardo correctamente")
             }else{
-                print("No se puedo guardar. Intente mas tarde")
+                alert("No se puedo guardar. Intente mas tarde")
             }
         })
+        .catch(err => {
+            console.error(err);
+            alert("Error en la conexión");
+        });
     }
 
 })
